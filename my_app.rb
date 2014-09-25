@@ -7,8 +7,21 @@ class MyApp < Sinatra::Base
     erb :index
   end
 
-  get "/about-me" do
-    "I'm Holly"
+  get "/about" do
+    erb :about
+  end
+
+  get "/:id" do
+    params.inspect
+  end
+
+  get "/posts/:post_name" do
+    post = params[:post_name]
+    erb ("/posts/#{post}").to_sym
+  end
+
+  get "/purple.jpg" do
+    params[:coverpic]
   end
 
 end

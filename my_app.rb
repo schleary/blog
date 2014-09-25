@@ -14,6 +14,7 @@ class MyApp < Sinatra::Base
   end
 
   get "/about" do
+    @posts = Post.all ##
     erb :about
   end
 
@@ -23,6 +24,7 @@ class MyApp < Sinatra::Base
 
   get "/posts/:post_name" do
     post = params[:post_name]
+    @posts = Post.all ##
     erb ("/posts/#{post}").to_sym
     # erb ("posts/#{params[:name]}").to_sym
   end

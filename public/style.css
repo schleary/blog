@@ -39,13 +39,13 @@ a{
 }
 
 body{
+  font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background-color: white;
   padding-left: 10%;
   padding-right: 10%;
 }
 
 .homecontent{
-  font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   letter-spacing: 3px;
   display: inline;
 }
@@ -91,4 +91,20 @@ body{
   text-align: center;
   text-transform: lowercase;
   color: gray;
+}
+
+h2{
+  color: orange;
+  text-emphasis: none;
+  /*text-transform: lowercase;*/
+  padding-bottom: 2%;
+}
+
+.innards{
+  padding-top: 5%;
+  padding-left: 3%;
+  font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  width: 80%;
+  text-align: justify;
+  color: #606060;
 }

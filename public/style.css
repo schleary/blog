@@ -1,0 +1,94 @@
+a:link {text-decoration:none;}
+a:link {color:orange; font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
+a:visited {color:gray;}
+
+.nav a:hover {margin-bottom: 2%; padding-bottom: 1 em; border-bottom: 1px solid #FF6600; }
+.nav a{color:black; border-bottom: 1px solid #000; border-color:black; padding-bottom: 1em; }
+
+.Navigation {
+  display: inline;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul{
+  padding-left: 0;
+  margin-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+li{
+  text-indent: -1em;
+  margin-left: 1em;
+}
+
+.nav{
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin-top: 4%;
+  margin-left:5%;
+  margin-right:5%;
+  margin-bottom: 3%;
+}
+
+a{
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+body{
+  background-color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.homecontent{
+  font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  letter-spacing: 3px;
+  display: inline;
+}
+
+.purple{
+  display: inline-block;
+  padding-left: 2%;
+  padding-bottom: 17%;
+}
+
+.title{
+  display: inline-block;
+  vertical-align: 650%;
+  padding-left: 5%;
+}
+
+.name{
+  margin-top: 40%;
+  font-size: 38;
+  padding-top: 10px;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #000;
+  color: #FF6600;/*#4169E1; /* #0077AA; */
+  letter-spacing: 3px;
+}
+
+.details{
+  font-size: 16;
+  letter-spacing: 4px;
+  color: #606060;
+}
+
+.sidebar{
+  float:right;
+  margin-bottom: 2%;
+  padding-bottom: 1 em;
+}
+
+.footnav{
+  margin-bottom: 2%;
+  font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  display: inline;
+  text-align: center;
+  text-transform: lowercase;
+  color: gray;
+}

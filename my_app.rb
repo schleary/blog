@@ -1,9 +1,15 @@
 require 'sinatra'
+require './lib/post'
 
 # my_app.rb
 class MyApp < Sinatra::Base
 
+  # before do
+  #   @posts = Post.all
+  # end
+
   get "/" do #route/path on the url. a simple slash means homepage
+    @posts = Post.all ##
     erb :index
   end
 
@@ -18,6 +24,7 @@ class MyApp < Sinatra::Base
   get "/posts/:post_name" do
     post = params[:post_name]
     erb ("/posts/#{post}").to_sym
+    # erb ("posts/#{params[:name]}").to_sym
   end
 
   get "/purple.jpg" do

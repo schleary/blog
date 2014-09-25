@@ -1,24 +1,44 @@
-<link rel = "stylesheet" href="/style.css" type =text/css />
+<head>
+  <link rel = "stylesheet" href="/style.css" type =text/css />
+  <script src="/app.js"></script>
+</head>
+
+<sidebar>
+  <div class = "sidebar">
+    <!-- <%= @posta.inspect%> -->
+    <% @posts.each do |post| %>
+      <p>
+        <!-- <a href = "/posts/name">Title</a> -->
+        <a href= "<%= post.url %>"><%= post.title %></a>
+      </p>
+    <% end %>
+  </div>
+</sidebar>
 
 <body>
 
-  <div id = "centerwords">
-    <span>
-      <img id= "coverpic" src="purple.jpg" height = "30%" />
-    </span>
-    <span>
-      <div>
-        <div class ="name">
-          Holly Leary
-        </div>
-        <div id = "title">
-          <br/>
-          Ada Developers Academy Cohort[1] Student Blog
-        </div>
+  <div class = "homecontent">
+    <div class = "purple">
+      <img id= "coverpic" src="purple.jpg" alt = "Holly Leary image" height = "35%" />
+    </div>
+    <div class = "title">
+
+      <div class ="name">
+        Holly Leary
       </div>
-    </span>
+      <div class = "details">
+        <br/>
+        Ada Developers Academy Student[1] Blog
+      </div>
+    </div>
+
   </div>
 
+
+
 </body>
+
+
+
 
 <!-- Home Blog about resume contact -->

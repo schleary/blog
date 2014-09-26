@@ -111,6 +111,20 @@ h2{
   /*text-align: justify;*/
   text-width: 66%;
   line-height: 145%;
+  height: 80%;
+
+}
+
+.postinnards{
+  padding-top: 5%;
+  padding-left: 14%;
+  padding-right: 5%;
+  font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  width: 70%;
+  /*text-align: justify;*/
+  text-width: 66%;
+  line-height: 145%;
+
 
 }
 
@@ -127,9 +141,8 @@ h2{
 
 .footnav{
   display: inline;
-  vertical-align: top;
+  vertical-align: bottom;
   text-align: center;
   margin-left:2%;
   margin-right:2%;
-
 }

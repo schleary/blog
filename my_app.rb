@@ -16,6 +16,10 @@ class MyApp < Sinatra::Base
     erb :index
   end
 
+  get "/macbook_air_wood_desk.jpg" do
+    params[:postpic]
+  end
+
   get "/posts/:post_name" do
     post = params[:post_name]
     @posts = Post.all ##
@@ -32,11 +36,15 @@ class MyApp < Sinatra::Base
     erb :about
   end
 
-
-
   get "/contact" do
     @posts = Post.all ##
     erb :contact
+  end
+
+  #making a post puts content in body instead of in url
+  # redirect sends back to method above. always does a get request
+  post "/contact" do
+    redirect to ("/contact")
   end
 
 end

@@ -43,6 +43,7 @@ body{
   background-color: white;
   padding-left: 10%;
   padding-right: 10%;
+  padding-bottom: 15%
 }
 
 .homecontent{
@@ -80,6 +81,7 @@ body{
 
 .sidebar{
   float:right;
+  margin-top: 2%;
   margin-bottom: 2%;
   padding-bottom: 1 em;
 }
@@ -102,8 +104,27 @@ h2{
 
 .innards{
   padding-top: 5%;
-  padding-left: 3%;
+  padding-left: 14%;
+  padding-right: 5%;
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  width: 80%;
-  text-align: justify;
+  width: 70%;
+  /*text-align: justify;*/
+  text-width: 66%;
+  line-height: 145%;
+
+}
+
+
+#postpic{
+  float: left;
+  padding-right: 7%;
+  padding-bottom: 5%;
+}
+
+.posttext{
+
+}
+
+footer{
+  vertical-align: bottom;
 }

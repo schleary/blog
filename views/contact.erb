@@ -19,7 +19,31 @@
   <div class="innards">
     <h2> Contact</h2>
       <p>
-        This is my contact info.
+
+        <!-- post puts it in the body instead of the url -->
+        <form action='/contact' method ="POST">
+          First Name:
+          <input type='text' name='first_name' />
+          <p>
+          Last Name:
+
+          <input type='text' name='last_name' />
+          <p>
+          <input type='submit'>
+          <!-- sends an http request to the server. takes input and sends it as the body -->
+
+        </form>
+
       </p>
   </div>
 </body>
+
+<footer>
+  <div class = footnav>
+    <ul>
+      <li class = "nav"<a href="http://adadevelopersacademy.org/"> Ada </a></li>
+      <li class = "nav"<a href="http://www.linkedin.com/pub/holly-leary/66/387/631">LinkedIn</a></li>
+      <li class = "nav"<a href="https://github.com/schleary">GitHub</a></li
+    </ul>
+  </div>
+</footer>

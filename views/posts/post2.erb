@@ -3,17 +3,6 @@
   <script src="/app.js"></script>
 </head>
 
-<sidebar>
-  <div class = "sidebar">
-    <!-- <%= @posta.inspect%> -->
-    <% @posts.each do |post| %>
-      <p>
-        <!-- <a href = "/posts/name">Title</a> -->
-        <a href= "<%= post.url %>"><%= post.title %></a>
-      </p>
-    <% end %>
-  </div>
-</sidebar>
 
 <body>
   <div class="innards">
@@ -35,4 +24,6 @@
     maximus bibendum nulla nisl vel elit. Aliquam fermentum justo et elit lobortis,
      sed tincidunt nisi accumsan. Phasellus eget commodo metus.
  </div>
+
+
 </body>

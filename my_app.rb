@@ -1,16 +1,30 @@
 require 'sinatra'
 require './lib/post'
 
-# my_app.rb
 class MyApp < Sinatra::Base
 
   # before do
   #   @posts = Post.all
   # end
 
-  get "/" do #route/path on the url. a simple slash means homepage
+  get "/purple.jpg" do
+    params[:coverpic]
+  end
+
+  get "/" do
     @posts = Post.all ##
     erb :index
+  end
+
+  get "/posts/:post_name" do
+    post = params[:post_name]
+    @posts = Post.all ##
+    erb ("/posts/#{post}").to_sym
+  end
+
+  get "/posts" do
+    @posts = Post.all
+    erb :posts
   end
 
   get "/about" do
@@ -18,19 +32,11 @@ class MyApp < Sinatra::Base
     erb :about
   end
 
-  get "/:id" do
-    params.inspect
-  end
 
-  get "/posts/:post_name" do
-    post = params[:post_name]
+
+  get "/contact" do
     @posts = Post.all ##
-    erb ("/posts/#{post}").to_sym
-    # erb ("posts/#{params[:name]}").to_sym
-  end
-
-  get "/purple.jpg" do
-    params[:coverpic]
+    erb :contact
   end
 
 end

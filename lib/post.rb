@@ -12,7 +12,7 @@ class Post
   # Post.all should give an array w/ post objects; Post.all => [post, post]
 
   def self.all
-    Dir.glob("views/posts/*").collect do |filepath|
+    Dir.glob("views/posts/*").reverse.collect do |filepath|
       a = filepath.split("/")
       self.new(a)
     end

@@ -64,7 +64,7 @@ body{
 
 .name{
   margin-top: 40%;
-  font-size: 38;
+  font-size: 225%;
   padding-top: 10px;
   padding-bottom: 2%;
   border-bottom: 1px solid #000;
@@ -73,7 +73,7 @@ body{
 }
 
 .details{
-  font-size: 16;
+  font-size: 100%;
   letter-spacing: 4px;
   color: #606060;
 }
@@ -106,5 +106,4 @@ h2{
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   width: 80%;
   text-align: justify;
-  color: #606060;
 }

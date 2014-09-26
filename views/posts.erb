@@ -1,0 +1,23 @@
+<head>
+  <link rel = "stylesheet" href="/style.css" type =text/css />
+  <script src="/app.js"></script>
+</head>
+
+<sidebar>
+  <div class = "sidebar">
+    <!-- <%= @posta.inspect%> -->
+    <% @posts.each do |post| %>
+      <p>
+        <!-- <a href = "/posts/name">Title</a> -->
+        <a href= "<%= post.url %>"><%= post.title %></a>
+      </p>
+    <% end %>
+  </div>
+</sidebar>
+
+<body>
+
+  <%= erb ("/posts/post2").to_sym %>
+  <%= erb ("/posts/post1").to_sym %>
+
+</body>

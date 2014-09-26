@@ -3,19 +3,8 @@
   <script src="/app.js"></script>
 </head>
 
-<sidebar>
-  <div class = "sidebar">
-    <!-- <%= @posta.inspect%> -->
-    <% @posts.each do |post| %>
-      <p>
-        <!-- <a href = "/posts/name">Title</a> -->
-        <a href= "<%= post.url %>"><%= post.title %></a>
-      </p>
-    <% end %>
-  </div>
-</sidebar>
-
 <body>
+
   <div class="innards">
     <h2> My First Post </h2>
 

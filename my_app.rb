@@ -47,4 +47,6 @@ class MyApp < Sinatra::Base
     redirect to ("/contact")
   end
 
+  
+
 end

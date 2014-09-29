@@ -3,17 +3,7 @@
   <script src="/app.js"></script>
 </head>
 
-<sidebar>
-  <div class = "sidebar">
-    <!-- <%= @posta.inspect%> -->
-    <% @posts.each do |post| %>
-      <p>
-        <!-- <a href = "/posts/name">Title</a> -->
-        <a href= "<%= post.url %>"><%= post.title %></a>
-      </p>
-    <% end %>
-  </div>
-</sidebar>
+
 
 <body>
   <div class="innards">
@@ -22,15 +12,14 @@
 
         <!-- post puts it in the body instead of the url -->
         <form action='/contact' method ="POST">
-          First Name:
+          Your Name:
           <input type='text' name='first_name' />
           <p>
-          Last Name:
+          Message:
           <input type='text' name='last_name' />
           <p>
           <input type='submit'>
           <!-- sends an http request to the server. takes input and sends it as the body -->
-
         </form>
 
       </p>
@@ -42,6 +31,7 @@
     <ul>
       <li class = footnav id = "ada" ><a href="http://adadevelopersacademy.org/"> Ada </a></li>
       <li class = footnav id = "linkedin" ><a href="http://www.linkedin.com/pub/holly-leary/66/387/631">LinkedIn</a></li>
+      <li class = footnav id = "twitter" ><a href="https://twitter.com/Schleary">Twitter</a></li>
       <li class = footnav id = "github" ><a href="https://github.com/schleary">GitHub</a></li>
     </ul>
   </div>

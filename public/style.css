@@ -1,34 +1,16 @@
 /* Layout */
-/* Header */
-/* Footer */
-/* Sidebar */
-/* Content */
-
 
 a:link {text-decoration:none;}
-a:link {color:orange; font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
-a:visited {color:gray;}
+a:link {color:gray; font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
+a:visited {color:orange;}
+
+a{
+  letter-spacing: 3px;
+  text-decoration: none;
+}
 
 .nav a:hover {margin-bottom: 2%; padding-bottom: 1 em; border-bottom: 1px solid #FF6600; }
 .nav a{color:black; border-bottom: 1px solid #000; border-color:black; padding-bottom: 1em; }
-
-.Navigation {
-  display: inline;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-ul{
-  padding-left: 0;
-  margin-left: 0;
-  padding-right: 0;
-  margin-right: 0;
-}
-
-li{
-  text-indent: -1em;
-  margin-left: 1em;
-}
 
 .nav{
   display: inline-block;
@@ -37,12 +19,18 @@ li{
   margin-top: 4%;
   margin-left:5%;
   margin-right:5%;
-  margin-bottom: 3%;
+  margin-bottom: 10%;
 }
 
-a{
-  letter-spacing: 3px;
-  text-decoration: none;
+.Navigation {
+  display: inline;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul{
+  /*this is a problem, because the width here is equal to the width of the post names in the sidebar.*/
+  -webkit-padding-start: 55px;
 }
 
 body{
@@ -50,31 +38,62 @@ body{
   background-color: white;
   padding-left: 10%;
   padding-right: 10%;
-  padding-bottom: 5%;
-  margin-bottom: 12%
+  padding-bottom: 13%;
 }
+
+
+
+
+/* Footer */
+.footnav{
+  margin-bottom: 2%;
+  margin-left:2%;
+  margin-right:2%;
+  display: inline;
+  text-align: center;
+  text-transform: lowercase;
+  vertical-align: bottom;
+  color: gray;
+}
+
+
+
+/* Sidebar */
+aside{
+  float:right;
+  margin-top: 12%;
+  margin-bottom: 2%;
+}
+
+
+
+/* Home Page*/
 
 .homecontent{
   letter-spacing: 3px;
   display: inline;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 .purple{
   display: inline-block;
   padding-left: 2%;
-  padding-bottom: 17%;
+  padding-top: 2%;
+
 }
 
 .title{
+  padding-top: 8%;
   display: inline-block;
-  vertical-align: 650%;
+  vertical-align: top;
   padding-left: 5%;
 }
 
 .name{
-  margin-top: 40%;
+
   font-size: 225%;
-  padding-top: 10px;
+
   padding-bottom: 2%;
   border-bottom: 1px solid #000;
   color: #FF6600;/*#4169E1; /* #0077AA; */
@@ -85,22 +104,31 @@ body{
   font-size: 100%;
   letter-spacing: 4px;
   color: #606060;
+
 }
 
-aside{
-  float:right;
-  margin-top: 10%;
-  margin-bottom: 2%;
-  padding-bottom: 1 em;
+
+
+/* Pages */
+
+.center{
+
 }
 
-.footnav{
-  margin-bottom: 2%;
-  font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  display: inline;
-  text-align: center;
-  text-transform: lowercase;
-  color: gray;
+.section{
+  display: block;
+  float: right;
+  height: 100%;
+}
+
+article{
+
+  width: 70%;
+  text-align: justify;
+  text-width: 66%;
+  line-height: 145%;
+  padding-right: 15%;
+  padding-left: 15%;
 }
 
 h2{
@@ -109,20 +137,6 @@ h2{
   /*text-transform: lowercase;*/
   padding-bottom: 2%;
 }
-
-article{
-  padding-top: 5%;
-  padding-left: 14%;
-  padding-right: 5%;
-  font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  width: 70%;
-  text-align: justify;
-  text-width: 66%;
-  line-height: 145%;
-  height: 80%;
-  margin-bottom: 5%;
-}
-
 
 #postpic{
   float: left;
@@ -135,14 +149,7 @@ article{
   font-style: italic;
   color: gray;
   text-align: right;
-}
-
-.footnav{
-  display: inline;
-  vertical-align: bottom;
-  text-align: center;
-  margin-left:2%;
-  margin-right:2%;
+  padding-bottom: 2%;
 }
 
 .code {
@@ -150,4 +157,10 @@ article{
   color: limegreen;
   /*#FF6600*/
   text-shadow: 1px black;
+}
+
+.video{
+  margin-bottom: 5%;
+  float: right;
+  margin-left: 7%;
 }

@@ -1,3 +1,10 @@
+/* Layout */
+/* Header */
+/* Footer */
+/* Sidebar */
+/* Content */
+
+
 a:link {text-decoration:none;}
 a:link {color:orange; font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
 a:visited {color:gray;}
@@ -43,7 +50,8 @@ body{
   background-color: white;
   padding-left: 10%;
   padding-right: 10%;
-  padding-bottom: 15%
+  padding-bottom: 5%;
+  margin-bottom: 12%
 }
 
 .homecontent{
@@ -79,7 +87,7 @@ body{
   color: #606060;
 }
 
-.sidebar{
+aside{
   float:right;
   margin-top: 10%;
   margin-bottom: 2%;
@@ -102,7 +110,7 @@ h2{
   padding-bottom: 2%;
 }
 
-.innards{
+article{
   padding-top: 5%;
   padding-left: 14%;
   padding-right: 5%;
@@ -112,20 +120,7 @@ h2{
   text-width: 66%;
   line-height: 145%;
   height: 80%;
-
-}
-
-.postinnards{
-  padding-top: 5%;
-  padding-left: 14%;
-  padding-right: 5%;
-  font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  width: 70%;
-  text-align: justify;
-  text-width: 66%;
-  line-height: 145%;
-
-
+  margin-bottom: 5%;
 }
 
 

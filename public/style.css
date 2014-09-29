@@ -1,8 +1,8 @@
 /* Layout */
 
 a:link {text-decoration:none;}
-a:link {color:gray; font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
-a:visited {color:orange;}
+a:link {color:#606060; font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
+a:visited {color:gray;}
 
 a{
   letter-spacing: 3px;
@@ -30,7 +30,7 @@ a{
 
 ul{
   /*this is a problem, because the width here is equal to the width of the post names in the sidebar.*/
-  -webkit-padding-start: 55px;
+  -webkit-padding-start: 111px;
 }
 
 body{
@@ -38,7 +38,7 @@ body{
   background-color: white;
   padding-left: 10%;
   padding-right: 10%;
-  padding-bottom: 13%;
+  padding-bottom: 10%;
 }
 
 
@@ -54,6 +54,10 @@ body{
   text-transform: lowercase;
   vertical-align: bottom;
   color: gray;
+}
+
+.footnav a:visited {
+  color:gray;
 }
 
 
@@ -91,9 +95,7 @@ aside{
 }
 
 .name{
-
   font-size: 225%;
-
   padding-bottom: 2%;
   border-bottom: 1px solid #000;
   color: #FF6600;/*#4169E1; /* #0077AA; */
@@ -104,25 +106,16 @@ aside{
   font-size: 100%;
   letter-spacing: 4px;
   color: #606060;
-
 }
 
 
 
 /* Pages */
-
 .center{
 
 }
 
-.section{
-  display: block;
-  float: right;
-  height: 100%;
-}
-
 article{
-
   width: 70%;
   text-align: justify;
   text-width: 66%;
@@ -145,11 +138,10 @@ h2{
 }
 
 .postdate{
-  padding-top: 1%;
   font-style: italic;
   color: gray;
   text-align: right;
-  padding-bottom: 2%;
+  padding-bottom: 3%;
 }
 
 .code {
@@ -163,4 +155,8 @@ h2{
   margin-bottom: 5%;
   float: right;
   margin-left: 7%;
+}
+
+.blockquote{
+  float:right;
 }

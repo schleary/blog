@@ -23,7 +23,7 @@ a{
 }
 
 .nav{
-  margin: 4% 5% 10% 5%;
+  margin: 4% 5% 5% 5%;
   display: inline-block;
   text-align: center;
 }
@@ -36,7 +36,7 @@ a{
 ul{
   /*this is a problem, because the width here is equal to the width of the post names
   in the sidebar, which changes based on .*/
-  -webkit-padding-start: 111px;
+  /*-webkit-padding-start: 111px;*/
 }
 
 body{
@@ -51,11 +51,12 @@ li:hover > .dropdown {
   position: absolute;
   display: block;
   /*this is a problem with flexible window movement.*/
-  left: 30.5%;
+  padding:0;
 }
 
 .horizontal-list {
   position: relative;
+  padding-left:0;
 }
 
 .horizontal-list > li {
@@ -72,7 +73,6 @@ li:hover > .dropdown {
 
 .dropdown{
   display: none;
-
 }
 
 .Navigation .dropdown li{
@@ -80,15 +80,13 @@ li:hover > .dropdown {
   margin-top:20%;
   float: left;
   text-transform: lowercase;
-
-  color: red;
 }
 
 .dropdown a:hover{
   border-bottom: none;
   text-decoration: none;
   color:orange;
-  border-bottom:1px solid #000;
+
   border-color:white;
   padding-bottom: 1em;
 }
@@ -96,8 +94,8 @@ li:hover > .dropdown {
 .dropdown a{
   border-bottom: none;
   text-decoration: none;
-  color:gray;
-  border-bottom:1px solid #000;
+  color:#C8C8C8 ;
+
   border-color:white;
   padding-bottom: 1em;
 }
@@ -128,9 +126,12 @@ li:hover > .dropdown {
 
 aside{
   float:right;
-  margin-top: 12%;
+  margin-top: 0%;
   margin-bottom: 2%;
+  margin-left:3%;
 }
+
+
 
 
 /* Home Page*/
@@ -173,14 +174,11 @@ aside{
 
 /* Pages */
 
-.center{
-
-}
 
 article{
   text-align: justify;
   line-height: 145%;
-  margin: auto 15%;
+  margin: auto 17%;
 }
 
 h2{
@@ -218,4 +216,12 @@ h2{
 
 .blockquote{
   float:right;
+}
+
+.center{
+  margin-top: 5%;
+}
+
+.contactpage{
+  height: 70%;
 }

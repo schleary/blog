@@ -8,15 +8,6 @@
 
   <body>
 
-    <aside>
-      <% @posts.each do |post| %>
-        <p>
-          <!-- <a href = "/posts/name">Title</a> -->
-          <a href= "<%= post.url %>"><%= post.title %></a>
-        </p>
-      <% end %>
-    </aside>
-
 
       <!-- <nav>
         <div class="Navigation">
@@ -73,6 +64,15 @@
           </div>
         </nav>
 
+
+    <!-- <aside>
+      <% @posts.each do |post| %>
+        <p>
+          <! <a href = "/posts/name">Title</a> -->
+          <!-- <a href= "<%= post.url %>"><%= post.title %></a>
+        </p>
+      <% end %>
+    </aside> -->
 
 
     <%=yield%>

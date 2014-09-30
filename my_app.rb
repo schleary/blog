@@ -12,8 +12,9 @@ class MyApp < Sinatra::Base
   end
 
   get "/" do
-    @posts = Post.all ##
+    @posts = Post.all
     erb :index
+    #, layout: false
   end
 
   get "/macbook_air_wood_desk.jpg" do
@@ -32,12 +33,12 @@ class MyApp < Sinatra::Base
   end
 
   get "/about" do
-    @posts = Post.all ##
+    @posts = Post.all
     erb :about
   end
 
   get "/contact" do
-    @posts = Post.all ##
+    @posts = Post.all
     erb :contact
   end
 

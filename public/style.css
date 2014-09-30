@@ -1,6 +1,6 @@
+
 /* Layout */
 
-a:link {text-decoration:none;}
 a:link {color:#606060; font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
 a:visited {color:gray;}
 
@@ -9,66 +9,72 @@ a{
   text-decoration: none;
 }
 
-.nav a:hover {margin-bottom: 2%; padding-bottom: 1 em; border-bottom: 1px solid #FF6600; }
-.nav a{color:black; border-bottom: 1px solid #000; border-color:black; padding-bottom: 1em; }
+.nav a:hover {
+  margin-bottom: 2%;
+  border-bottom: 1px solid #FF6600;
+}
+
+.nav a{
+  color:black;
+  border-bottom:
+  1px solid #000;
+  border-color:black;
+  padding-bottom: 1em;
+}
 
 .nav{
+  margin: 4% 5% 10% 5%;
   display: inline-block;
-  vertical-align: top;
+
   text-align: center;
-  margin-top: 4%;
-  margin-left:5%;
-  margin-right:5%;
-  margin-bottom: 10%;
 }
 
 .Navigation {
-  display: inline;
+
   text-align: center;
   text-transform: uppercase;
 }
 
 ul{
-  /*this is a problem, because the width here is equal to the width of the post names in the sidebar.*/
+  /*this is a problem, because the width here is equal to the width of the post names
+  in the sidebar, which changes based on .*/
   -webkit-padding-start: 111px;
 }
 
 body{
   font-family: "proxima-nova-alt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background-color: white;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 10%;
+  padding: 0 10% 10% 10%;
 }
 
 
-
-
 /* Footer */
+
 .footnav{
-  margin-bottom: 2%;
   margin-left:2%;
   margin-right:2%;
   display: inline;
   text-align: center;
   text-transform: lowercase;
   vertical-align: bottom;
-  color: gray;
 }
 
 .footnav a:visited {
   color:gray;
 }
 
+.footnav ul{
+  -webkit-padding-start: 0;
+}
 
 
 /* Sidebar */
+
 aside{
   float:right;
   margin-top: 12%;
   margin-bottom: 2%;
 }
-
 
 
 /* Home Page*/
@@ -109,19 +115,16 @@ aside{
 }
 
 
-
 /* Pages */
+
 .center{
 
 }
 
 article{
-  width: 70%;
   text-align: justify;
-  text-width: 66%;
   line-height: 145%;
-  padding-right: 15%;
-  padding-left: 15%;
+  margin: auto 15%;
 }
 
 h2{
@@ -131,7 +134,7 @@ h2{
   padding-bottom: 2%;
 }
 
-#postpic{
+.postpic{
   float: left;
   padding-right: 7%;
   padding-bottom: 5%;

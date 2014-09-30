@@ -3,9 +3,9 @@ require './lib/post'
 
 class MyApp < Sinatra::Base
 
-  # before do
-  #   @posts = Post.all
-  # end
+  before do
+    @posts = Post.all
+  end
 
   get "/purple.jpg" do
     params[:coverpic]
@@ -47,6 +47,6 @@ class MyApp < Sinatra::Base
     redirect to ("/contact")
   end
 
-  
+
 
 end

@@ -18,17 +18,61 @@
     </aside>
 
 
-      <nav>
+      <!-- <nav>
         <div class="Navigation">
           <ul>
             <li class = "nav"><a href="/"> Home </a></li>
             <li class = "nav"><a href="/posts">Blog</a></li>
             <li class = "nav"><a href="/about">About</a></li>
             <li class = "nav"><a href="/contact">Contact</a></li>
-
           </ul>
         </div>
-      </nav>
+      </nav> -->
+
+
+
+        <!-- <div class='nav'>
+          <ul class="horizontal-list">
+            <li><a class="active" href='/about-me'>About</a></li>
+            <li><a class="" href="#">Blog</a></li>
+            <li><a class="" href="#">Contact</a></li>
+            <li class='dropdown-anchor'>
+              <a class="" href="#">Cats</a>
+              <ul class='dropdown'>
+
+                <% @posts.each do |post| %>
+                  <li><a href= "<%= post.url %>"><%= post.title %></a></li>
+                <% end %>
+
+
+              </ul>
+            </li>
+          </ul>
+        </div>  -->
+
+        <nav>
+          <div class="Navigation">
+            <ul class="horizontal-list">
+              <li class = "nav"><a href="/"> Home </a></li>
+
+
+              <li class = "nav" class='dropdown-anchor'><a href="/posts">Blog</a>
+                  <ul class='dropdown'>
+                    <% @posts.each do |post| %>
+                    <p>
+                      <li><a class = "dropposts" href= "<%= post.url %>"><%= post.title %></a></li>
+                    <p>
+                    <% end %>
+                  </ul>
+              </li>
+
+
+              <li class = "nav"><a href="/about">About</a></li>
+              <li class = "nav"><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
 
 
     <%=yield%>

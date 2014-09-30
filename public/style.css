@@ -9,12 +9,12 @@ a{
   text-decoration: none;
 }
 
-.nav a:hover {
+.Navigation a:hover {
   margin-bottom: 2%;
   border-bottom: 1px solid #FF6600;
 }
 
-.nav a{
+.Navigation a{
   color:black;
   border-bottom:
   1px solid #000;
@@ -25,12 +25,10 @@ a{
 .nav{
   margin: 4% 5% 10% 5%;
   display: inline-block;
-
   text-align: center;
 }
 
 .Navigation {
-
   text-align: center;
   text-transform: uppercase;
 }
@@ -47,7 +45,65 @@ body{
   padding: 0 10% 10% 10%;
 }
 
+/*##############################################*/
 
+li:hover > .dropdown {
+  position: absolute;
+  display: block;
+  /*this is a problem with flexible window movement.*/
+  left: 30.5%;
+}
+
+.horizontal-list {
+  position: relative;
+}
+
+.horizontal-list > li {
+  display: inline-block;
+}
+
+.dropdown-anchor {
+  position: relative;
+}
+
+.Navigation ul > li{
+  display: inline-block;
+}
+
+.dropdown{
+  display: none;
+
+}
+
+.Navigation .dropdown li{
+  text-align: left;
+  margin-top:20%;
+  float: left;
+  text-transform: lowercase;
+
+  color: red;
+}
+
+.dropdown a:hover{
+  border-bottom: none;
+  text-decoration: none;
+  color:orange;
+  border-bottom:1px solid #000;
+  border-color:white;
+  padding-bottom: 1em;
+}
+
+.dropdown a{
+  border-bottom: none;
+  text-decoration: none;
+  color:gray;
+  border-bottom:1px solid #000;
+  border-color:white;
+  padding-bottom: 1em;
+}
+
+
+/*##############################################*/
 /* Footer */
 
 .footnav{

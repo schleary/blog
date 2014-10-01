@@ -95,7 +95,7 @@ li:hover > .dropdown {
   border-bottom: none;
   text-decoration: none;
   color:#C8C8C8 ;
-
+   text-shadow: 2px 2px white;
   border-color:white;
   padding-bottom: 1em;
 }

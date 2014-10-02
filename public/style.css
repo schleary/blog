@@ -73,6 +73,8 @@ li:hover > .dropdown {
 
 .dropdown{
   display: none;
+  /*get rid of this if you go back to css toggle*/
+  /*position: absolute;*/
 }
 
 .Navigation .dropdown li{

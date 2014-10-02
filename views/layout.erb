@@ -1,10 +1,9 @@
 <!-- <!DOCTYPE html> -->
 <html>
   <head>
-    <link rel = "stylesheet" href="/style.css" type =text/css />
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="/app.js"></script>
+
+    <link rel = "stylesheet" href="/style.css" type =text/css />
 
     <title> Holly Leary </title>
 
@@ -51,7 +50,7 @@
               <li class = "nav"><a href="/"> Home </a></li>
 
 
-              <li class = "nav" class='dropdown-anchor'><a href="/posts">Blog</a>
+              <li class = "nav" class='dropdown-anchor'><a id = "a" href="/posts">Blog</a>
                   <ul class='dropdown'>
                     <% @posts.each do |post| %>
                     <p>
@@ -81,6 +80,10 @@
 
     <%=yield%>
   <!-- means insert other content here -->
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <scripts src = "/javascripts/jquery-2.1.1.min.js"> </script>
+    <script src="/javascripts/app.js"></script>
   </body>
 
 </html>

@@ -1,0 +1,145 @@
+
+<head>
+  <link rel = "stylesheet" href="/style.css" type =text/css />
+  <script src="/javascripts/app.js"></script>
+</head>
+
+<body>
+  <div class = "center">
+
+    <section>
+      <article>
+        <h2> Easy Easter Egg </h2>
+
+        <div class = "posttext" class="ellipsis">
+            You can do a lot with Javascript. You need only search something like "best Javascript sites" into Google
+            to see the endless moving, zooming, toggling, darting, flashing, splashing possibilities.
+            <p>
+            However, if you're like me, and you worked hard to create a nice, calm, minimalist site, you too might be hesitant
+            to add a lot of busy bells and whistles. Perhaps too, like me, you find Javascript to be incredibly
+            fickle, frustrating, and unpredictable. And maybe you've even been instructed to add some of this Javascript
+            to your quiet little blog, and you can't get anything to work in a way that isn't upsetting you.
+            <p>
+            For you, person after my own heart, I have a lovely little solution: Konami Easter Eggs.
+            <p>
+            <br>
+            <img class = "postpic" src="/pasteleggs.jpg" alt = "Easter Eggs"/>
+
+            For the uniitiated, two explanations:
+            <p>
+            <h3> Easter Eggs </h3>
+            <p>
+            No, not the pseudo-religious symbols of fertlity. What we're talking about here are hidden gems that
+            can sometimes be found within websites, if only you know the secret code that unlocks them.
+            <p>
+            <h3> Konami Codes </h3>
+            <p>
+            Konami, a once-popular video game developer, used to have a code that, when entered, would allow
+            the player to cheat. The code, still etched into the minds of many a video game player to this day, was
+            this:
+            <p>
+            <div class = "konami">
+              <h4>↑ ↑ ↓ ↓ ← → ← → B A </h4>
+              </div>
+            <p>
+            A Konami easter egg is simply a hidden apsect of a webpage that is activated when the user
+            enters the konami code via the keyboard. Try it now, and see what happens...
+            <p>
+            Cool, yeah? You have just activated the Konami easter egg. Now hit some other keys. Awesome, right?
+            <p>
+            Now that you know how magical this knowledge is, don't you want to add your own easter egg to your site? Of course you do!
+            Here's how:
+            <p>
+            For the purposes of this tutorial, I'm going to assume that you're using Sinatra. I'm also going to assume that you have
+            the jQuery library downloaded. You should have a public folder inside your root directory, and inside that, a javascripts folder.
+            Within that folder, you'll need to create a Javascript file.
+            <p>
+            As you probably know by now, the Javascript file requires some special code if it's going to run any jQuery. So inside your js
+            document, you need to paste the following:
+            <p>
+            <div class = code>
+              $(document).ready(function () {
+              <p>
+                <div class = "comments"> //Subsequent code will go here </div>
+              <p>
+              })
+            </div>
+
+            <p>
+            Everything else that you type into this file should fall inside that code.
+            <p>
+            Now, you're going to paste inside that the code that cause the Konami code to do something.
+            <p>
+
+            <div class = code>
+              var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+              <br>
+              $(document).keydown(function(e) {
+              <br>
+              &nbsp&nbsp kkeys.push( e.keyCode );
+              <br>
+              &nbsp&nbsp if ( kkeys.toString().indexOf( konami ) >= 0 ){
+              <br>
+              &nbsp&nbsp&nbsp&nbsp  $(document).unbind('keydown',arguments.callee);
+              <p>
+                  <div class = "comments"> //Your easter egg will go here </div>
+              <p>
+
+              &nbsp&nbsp&nbsp&nbsp  }
+              <br>
+              });
+
+            </div>
+            <p>
+            You can craft any code to make up your easter egg, and insert it into the Konami code to activate it. But, if you want to replicate my awe-invoking
+            assault of unicorns, you will need to paste the following within your Konami code:
+            <p>
+            <div class = code>
+              $.getScript('http://www.cornify.com/js/cornify.js', function(){
+                <br>
+            &nbsp&nbsp    cornify_add();
+                <br>
+            &nbsp&nbsp    $(document).keydown(cornify_add);
+                <br>
+              });
+            </div>
+            <p>
+
+            Now you'll have to go to every erb file that you'd like to use this easter egg and paste the following at the top (though, keep in mind that the
+            file and folder names in quotes should reflect to your own paths):
+            <p>
+            <div class = code>
+              < link rel = /"the name_od_your_stylesheet/" href="/your_style.css" type =text/css />
+              <br>
+              < script src="/javascripts/your_app.js"></ script>
+            </div>
+            <p>
+            And there ya go! Instant konami code easter egg!
+            <p>
+            This shortcut is super easy and lets you avoid the hundred of lines of code that the
+            original creator had to write. (You may have notices that some of your code links to a website that
+            has it's own code.)
+            <p>
+            But don't miss the opportunity to learn here. Study the Javascript. See if you can figure out
+            where functions begin and end, what they do, and when and how they're called. When you figure more out,
+            it might be fun to code another easter egg yourself, and insert it in the Konami code in place of the unicorn js.
+            <p>
+            This is a really wonderful option for a minimalist design. It compensates wonderfully for all those times that things feel too
+            silly or gaudy to put on your site. Easter eggs let you have it all.
+            <p>
+
+            <p>
+
+            <div class = "postdate">
+             <p>
+               <div class = "date"> 10.05.14 </div>
+
+               <!-- <%= @date %> -->
+             </p>
+           </div>
+           <!-- <div id="read_more">Read More</div>
+         </div>  <!/posttext -->
+        </article>
+      </section>
+    </div>
+  </body>

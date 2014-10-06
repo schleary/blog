@@ -30,6 +30,8 @@ class MyApp < Sinatra::Base
   get "/posts" do
     @posts = Post.all
     erb :posts
+    # @date = Date.all
+    # erb :date
   end
 
   get "/about" do

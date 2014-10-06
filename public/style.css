@@ -264,3 +264,18 @@ h3{
   color: #C8C8C8;
   margin-left: 5%;
 }
+
+
+.icons a{
+  fill: #000;
+  background-color: #C8C8C8;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.icons a:hover{
+  background-color:#FF6600;
+}

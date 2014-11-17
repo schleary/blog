@@ -185,18 +185,16 @@
             get     "/examples/:id/delete",   to: "examples#destroy", as: :examples_destroy<br>
             delete  "/examples/:id",          to:	"examples#destroy", as: :examples_delete<br>
             get     "/examples/:id/upvote",   to: "examples#upvote",  as: :examples_upvote<br>
-            <br>
             end
             </div>
-            <br>
             <br>
             Here we're setting up the paths that will take us to specific actions and controllers, using restful routes paths. Those paths
             that take an id are used to update a specific instance of an example object.
             <br>
-            Moving on to View pages, where we might see a form to create an instance of an example object:<br>
-            Create a new.html.erb file in your views/examples folder:
             <br>
-            <div class = code
+            Moving on to View pages, where we might see a form to create an instance of an example object:<br>
+            <br>
+            <div class = code>
             form_for @example do |f| <br>
             &nbsp&nbsp   f.label :your_own_attribute :<br>
             &nbsp&nbsp   f.text_field :your_own_attribute <br/>
@@ -205,10 +203,9 @@
             </div>
 
             <br>
-            <br>
             This fills the examples fields and goes to the create action in the Example Controller, and creates an
             instance of an example class in the Example Model. You'll want to create other pages, perhaps with other form_fors. An
-            edit page, to edit the info, an index page, which will show all of the examples, and perhaps a show page, which will show
+            edit page to edit the info, an index page, which will show all of the examples, and perhaps a show page, which will show
             a specific instance of an example.
             <br>
             <br>

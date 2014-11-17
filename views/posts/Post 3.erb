@@ -14,8 +14,9 @@
             A month ago, trying to put together a Rails App could bring me to tears. But now that I have a
             quick and easy go-to process, it's become so enjoyable for me that I find myself building apps
             in my free time for fun. This is supposed to be 'instant', so let's get to it.
-
+            <br>
             In the terminal:
+            <br>
             <div class = code>
               > rails new example -T -d postgresql
               <br>
@@ -30,7 +31,7 @@
               > atom .
               <br>
             </div>
-
+            <br>
             This starts a new application, creates a database, and starts a local server.
             <br>
             Still in the terminal (you can do a LOT in the terminal):
@@ -47,60 +48,69 @@
               > atom .
               <br>
             </div>
-
+            <br>
             Cool. Instant models and controllers. Just make sure that your attributes have the correct
             types(string, integer, or text, etc.).You've migrated the changes to the database, opened your app, and now
             you're ready to fill in the model-view-controller.
-
+            <br>
             In the controller, there are many default actions you can start with:
-
+            <br>
             <div class = code>
               ExamplesController < ApplicationController
               <br>
+              <br>
               def index
-                @examples = Examples.all
+              </pre>  @examples = Examples.all
               end
+              <br>
               <br>
               def new
-                 @examples = Example.new
+              </pre>  @examples = Example.new
               end
+              <br>
               <br>
               def create
-                @example = Album.new(example_params)
-                if @example.save
-                  redirect_to examples_show_path(@album)
-                else
-                  render 'new'
-                end
+              </pre>  @example = Album.new(example_params)
+              </pre>  if @example.save
+              </pre>    redirect_to examples_show_path(@album)
+              </pre>  else
+              </pre>    render 'new'
+              </pre>    end
               end
+              <br>
               <br>
               def show
-                @example = Example.find(params[:id])
+              </pre>  @example = Example.find(params[:id])
               end
+              <br>
               <br>
               def edit
-                @example = Example.find(params[:id])
+              </pre>  @example = Example.find(params[:id])
               end
+              <br>
               <br>
               def update
-                @example = Example.find(params[:id])
-                if @example.update(find_params)
-                  redirect_to example_show_path(@album)
-                else
-                  render 'edit'
-                end
+              </pre>  @example = Example.find(params[:id])
+              </pre>  if @example.update(find_params)
+              </pre>    redirect_to example_show_path(@album)
+              </pre>  else
+              </pre>    render 'edit'
+              </pre>  end
               end
               <br>
+              <br>
               def destroy
-                @example = Example.find(params[:id])
-                @example.destroy
-                redirect_to examples_path
+              </pre>  @example = Example.find(params[:id])
+              </pre>  @example.destroy
+              </pre>  redirect_to examples_path
               end
+              <br>
               <br>
               private
               <br>
+              <br>
               def example_params
-                params.require(:example).permit(:your_own_attribute)
+              </pre>  params.require(:example).permit(:your_own_attribute)
               end
               <br>
             </div>

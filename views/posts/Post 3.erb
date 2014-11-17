@@ -15,6 +15,10 @@
             quick and easy go-to process, it's become so enjoyable for me that I find myself building apps
             in my free time for fun. This is supposed to be 'instant', so let's get to it.
             <br>
+            <br>
+            Please keep in mind that whenever I use the word 'example', you are encouraged to create your own relevant
+            verbiage. For example, if you are creating a blog, you may use the word "post". If you are creating a example ranker,
+            you will likely want to use the word 'example'.
             In the terminal:
             <br>
             <div class = code>
@@ -54,7 +58,9 @@
             types(string, integer, or text, etc.).You've migrated the changes to the database, opened your app, and now
             you're ready to fill in the model-view-controller.
             <br>
-            In the controller, there are many default actions you can start with:
+            <br>
+            In the controller, there are many default actions you can start with, and use to set instance variables
+            that you will use in your view (web) pages:
             <br>
             <br>
             <div class = code>
@@ -143,9 +149,55 @@
               <br>
               end
               <br>
+              <br>
+              end
             </div>
-
-
+            <br>
+            <br>
+            You've now set up all the default actions that will do some of the logic of your site. The 'show' action, for example,
+            will show you a specific instance of an example, whereas an index action will have you an instance variable
+            that contains <emph>all<emph> of your example objects. Private methods, like 'example_params' can only be
+            called from within this controller.
+            <br><br>
+            <br>
+            Now that we have the actions we'll need for the pages, let's check out the routes.rb file:
+            <br>
+            <br>
+            <div class = code>
+            Rails.application.routes.draw do
+            <br>
+            # Home
+            <br>
+            get    "home/index",                                  as: :home_index
+            <br>
+            root   "home#index",                                  as: :root
+            <br>
+            <br>
+            # examples routes
+            <br>
+            get	    "/examples",              to:	"examples#index",   as: :examples
+            <br>
+            get	    "/examples/new",          to:	"examples#new",     as: :examples_new<br>
+            post    "/examples",              to:	"examples#create",  as: :examples_create<br>
+            get	    "/examples/:id",          to:	"examples#show",    as: :examples_show<br>
+            get	    "/examples/:id/edit",     to:	"examples#edit",    as: :examples_edit<br>
+            patch	  "/examples/:id",          to:	"examples#update",  as: :examples_update<br>
+            get     "/examples/:id/delete",   to: "examples#destroy", as: :examples_destroy<br>
+            delete  "/examples/:id",          to:	"examples#destroy", as: :examples_delete<br>
+            get     "/examples/:id/upvote",   to: "examples#upvote",  as: :examples_upvote<br>
+            <br><br>
+            end
+            <br>
+            <div>
+            <br><br>
+            Here we're setting up the paths that will take us to specific actions and controllers, using restful routes paths. Those paths
+            that take an id are used to update a specific instance of an example object.
+            <br>
+            Moving on to View pages, where we might see a form to create an instance of an example object:<br>
+            <br>
+            <div class = code>
+        
+            <end>
             <p>
 
             <div class = "postdate">

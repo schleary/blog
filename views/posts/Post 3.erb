@@ -6,35 +6,111 @@
 
 <body>
   <div class = "center">
-
     <section>
       <article>
-        <h2> Post 3 </h2>
+        <h2> Instant Rails App</h2>
           <div class = "posttext" class="ellipsis">
             <p>
+            A month ago, trying to put together a Rails App could bring me to tears. But now that I have a
+            quick and easy go-to process, it's become so enjoyable for me that I find myself building apps
+            in my free time for fun. This is supposed to be 'instant', so let's get to it.
 
+            In the terminal:
             <div class = code>
-              > mkdir your_directory_name
+              > rails new example -T -d postgresql
               <br>
-              > cd your_directory_name
+              > cd example
               <br>
-              > atom your_file_name.rb
+              > rake db:create
               <br>
-              > git init
+              > control-T
               <br>
-              > touch your_directory_name
+              > rails server
               <br>
-              > git add your_file_name.rb
-              <br>
-              > git commit -m "some comment"
+              > atom .
               <br>
             </div>
+
+            This starts a new application, creates a database, and starts a local server.
+            <br>
+            Still in the terminal (you can do a LOT in the terminal):
+            <br>
+            <div class = code>
+              > rails g model example your_own_attribute:string
+              <br>
+              > rake db:migrate
+              <br>
+              > rails g controller example
+              <br>
+              > control-T
+              <br>
+              > atom .
+              <br>
+            </div>
+
+            Cool. Instant models and controllers. Just make sure that your attributes have the correct
+            types(string, integer, or text, etc.).You've migrated the changes to the database, opened your app, and now
+            you're ready to fill in the model-view-controller.
+
+            In the controller, there are many default actions you can start with:
+
+            <div class = code>
+              ExamplesController < ApplicationController
+              <br>
+              def index
+                @examples = Examples.all
+              end
+              <br>
+              def new
+                 @examples = Example.new
+              end
+              <br>
+              def create
+                @example = Album.new(example_params)
+                if @example.save
+                  redirect_to examples_show_path(@album)
+                else
+                  render 'new'
+                end
+              end
+              <br>
+              def show
+                @example = Example.find(params[:id])
+              end
+              <br>
+              def edit
+                @example = Example.find(params[:id])
+              end
+              <br>
+              def update
+                @example = Example.find(params[:id])
+                if @example.update(find_params)
+                  redirect_to example_show_path(@album)
+                else
+                  render 'edit'
+                end
+              end
+              <br>
+              def destroy
+                @example = Example.find(params[:id])
+                @example.destroy
+                redirect_to examples_path
+              end
+              <br>
+              private
+              <br>
+              def example_params
+                params.require(:example).permit(:your_own_attribute)
+              end
+              <br>
+            </div>
+
 
             <p>
 
             <div class = "postdate">
              <p>
-               <div class = "date"> 10.12.14 </div>
+               <div class = "date"> 11.16.14 </div>
 
                <!-- <%= @date %> -->
              </p>

@@ -69,73 +69,73 @@
               <br>
               def index
               <br>
-              &nbsp&nbsp&nbsp&nbsp  @examples = Examples.all
+              &nbsp&nbsp  @examples = Examples.all
               <br>
               end
               <br>
               <br>
               def new
               <br>
-              &nbsp&nbsp&nbsp&nbsp  @examples = Example.new
+              &nbsp&nbsp  @examples = Example.new
               <br>
               end
               <br>
               <br>
               def create
               <br>
-              &nbsp&nbsp&nbsp&nbsp  @example = Album.new(example_params)
+              &nbsp&nbsp  @example = Album.new(example_params)
               <br>
-              &nbsp&nbsp&nbsp&nbsp  if @example.save
+              &nbsp&nbsp  if @example.save
               <br>
-              &nbsp&nbsp&nbsp&nbsp    redirect_to examples_show_path(@album)
+              &nbsp&nbsp    redirect_to examples_show_path(@album)
               <br>
-              &nbsp&nbsp&nbsp&nbsp  else
+              &nbsp&nbsp  else
               <br>
-              &nbsp&nbsp&nbsp&nbsp    render 'new'
+              &nbsp&nbsp    render 'new'
               <br>
-              &nbsp&nbsp&nbsp&nbsp    end
+              &nbsp&nbsp    end
               <br>
               end
               <br>
               <br>
               def show
               <br>
-              &nbsp&nbsp&nbsp&nbsp  @example = Example.find(params[:id])
+              &nbsp&nbsp  @example = Example.find(params[:id])
               <br>
               end
               <br>
               <br>
               def edit
               <br>
-              &nbsp&nbsp&nbsp&nbsp  @example = Example.find(params[:id])
+              &nbsp&nbsp  @example = Example.find(params[:id])
               <br>
               end
               <br>
               <br>
               def update
               <br>
-              &nbsp&nbsp&nbsp&nbsp  @example = Example.find(params[:id])
+              &nbsp&nbsp  @example = Example.find(params[:id])
               <br>
-              &nbsp&nbsp&nbsp&nbsp  if @example.update(find_params)
+              &nbsp&nbsp  if @example.update(find_params)
               <br>
-              &nbsp&nbsp&nbsp&nbsp    redirect_to example_show_path(@album)
+              &nbsp&nbsp    redirect_to example_show_path(@album)
               <br>
-              &nbsp&nbsp&nbsp&nbsp  else
+              &nbsp&nbsp  else
               <br>
-              &nbsp&nbsp&nbsp&nbsp    render 'edit'
+              &nbsp&nbsp    render 'edit'
               <br>
-              &nbsp&nbsp&nbsp&nbsp  end
+              &nbsp&nbsp  end
               <br>
               end
               <br>
               <br>
               def destroy
               <br>
-              &nbsp&nbsp&nbsp&nbsp  @example = Example.find(params[:id])
+              &nbsp&nbsp  @example = Example.find(params[:id])
               <br>
-              &nbsp&nbsp&nbsp&nbsp  @example.destroy
+              &nbsp&nbsp  @example.destroy
               <br>
-              &nbsp&nbsp&nbsp&nbsp  redirect_to examples_path
+              &nbsp&nbsp  redirect_to examples_path
               <br>
               end
               <br>
@@ -145,7 +145,7 @@
               <br>
               def example_params
               <br>
-              &nbsp&nbsp&nbsp&nbsp  params.require(:example).permit(:your_own_attribute)
+              &nbsp&nbsp  params.require(:example).permit(:your_own_attribute)
               <br>
               end
               <br>
@@ -185,19 +185,34 @@
             get     "/examples/:id/delete",   to: "examples#destroy", as: :examples_destroy<br>
             delete  "/examples/:id",          to:	"examples#destroy", as: :examples_delete<br>
             get     "/examples/:id/upvote",   to: "examples#upvote",  as: :examples_upvote<br>
-            <br><br>
-            end
             <br>
+            end
             <div>
-            <br><br>
+            <br>
+            <br>
             Here we're setting up the paths that will take us to specific actions and controllers, using restful routes paths. Those paths
             that take an id are used to update a specific instance of an example object.
             <br>
             Moving on to View pages, where we might see a form to create an instance of an example object:<br>
+            Create a new.html.erb file in your views/examples folder:
             <br>
             <div class = code>
-        
+
+            //<%= form_for @example do |f| %><br>
+            &nbsp&nbsp  //<%= f.label :your_own_attribute %>:<br>
+            &nbsp&nbsp  //<%= f.text_field :your_own_attribute %><br/>
+            &nbsp&nbsp  //<%= f.submit %><br>
+            //<% end %><br>
             <end>
+            <br>
+            <br>
+            This fills the examples fields and goes to the create action in the Example Controller, and creates an
+            instance of an example class in the Example Model. You'll want to create other pages, perhaps with other form_fors. An
+            edit page, to edit the info, an index page, which will show all of the examples, and perhaps a show page, which will show
+            a specific instance of an example.
+            <br>
+            <br>
+            And that's pretty much it! You now have a very basic rails app!
             <p>
 
             <div class = "postdate">

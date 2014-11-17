@@ -60,49 +60,75 @@
               <br>
               <br>
               def index
+              <br>
               </pre>  @examples = Examples.all
+              <br>
               end
               <br>
               <br>
               def new
+              <br>
               </pre>  @examples = Example.new
+              <br>
               end
               <br>
               <br>
               def create
+              <br>
               </pre>  @example = Album.new(example_params)
+              <br>
               </pre>  if @example.save
+              <br>
               </pre>    redirect_to examples_show_path(@album)
+              <br>
               </pre>  else
+              <br>
               </pre>    render 'new'
+              <br>
               </pre>    end
+              <br>
               end
               <br>
               <br>
               def show
+              <br>
               </pre>  @example = Example.find(params[:id])
+              <br>
               end
               <br>
               <br>
               def edit
+              <br>
               </pre>  @example = Example.find(params[:id])
+              <br>
               end
               <br>
               <br>
               def update
+              <br>
               </pre>  @example = Example.find(params[:id])
+              <br>
               </pre>  if @example.update(find_params)
+              <br>
               </pre>    redirect_to example_show_path(@album)
+              <br>
               </pre>  else
+              <br>
               </pre>    render 'edit'
+              <br>
               </pre>  end
+              <br>
               end
               <br>
               <br>
               def destroy
+              <br>
               </pre>  @example = Example.find(params[:id])
+              <br>
               </pre>  @example.destroy
+              <br>
               </pre>  redirect_to examples_path
+              <br>
               end
               <br>
               <br>
@@ -110,7 +136,9 @@
               <br>
               <br>
               def example_params
+              <br>
               </pre>  params.require(:example).permit(:your_own_attribute)
+              <br>
               end
               <br>
             </div>

@@ -36,6 +36,7 @@
             <br>
             Still in the terminal (you can do a LOT in the terminal):
             <br>
+            <br>
             <div class = code>
               > rails g model example your_own_attribute:string
               <br>
@@ -55,79 +56,80 @@
             <br>
             In the controller, there are many default actions you can start with:
             <br>
+            <br>
             <div class = code>
               ExamplesController < ApplicationController
               <br>
               <br>
               def index
               <br>
-              <pre>  @examples = Examples.all
+              &nbsp&nbsp&nbsp&nbsp  @examples = Examples.all
               <br>
               end
               <br>
               <br>
               def new
               <br>
-              <pre>  @examples = Example.new
+              &nbsp&nbsp&nbsp&nbsp  @examples = Example.new
               <br>
               end
               <br>
               <br>
               def create
               <br>
-              <pre>  @example = Album.new(example_params)
+              &nbsp&nbsp&nbsp&nbsp  @example = Album.new(example_params)
               <br>
-              <pre>  if @example.save
+              &nbsp&nbsp&nbsp&nbsp  if @example.save
               <br>
-              <pre>    redirect_to examples_show_path(@album)
+              &nbsp&nbsp&nbsp&nbsp    redirect_to examples_show_path(@album)
               <br>
-              <pre>  else
+              &nbsp&nbsp&nbsp&nbsp  else
               <br>
-              <pre>    render 'new'
+              &nbsp&nbsp&nbsp&nbsp    render 'new'
               <br>
-              <pre>    end
+              &nbsp&nbsp&nbsp&nbsp    end
               <br>
               end
               <br>
               <br>
               def show
               <br>
-              <pre>  @example = Example.find(params[:id])
+              &nbsp&nbsp&nbsp&nbsp  @example = Example.find(params[:id])
               <br>
               end
               <br>
               <br>
               def edit
               <br>
-              <pre>  @example = Example.find(params[:id])
+              &nbsp&nbsp&nbsp&nbsp  @example = Example.find(params[:id])
               <br>
               end
               <br>
               <br>
               def update
               <br>
-              <pre>  @example = Example.find(params[:id])
+              &nbsp&nbsp&nbsp&nbsp  @example = Example.find(params[:id])
               <br>
-              <pre>  if @example.update(find_params)
+              &nbsp&nbsp&nbsp&nbsp  if @example.update(find_params)
               <br>
-              <pre>    redirect_to example_show_path(@album)
+              &nbsp&nbsp&nbsp&nbsp    redirect_to example_show_path(@album)
               <br>
-              <pre>  else
+              &nbsp&nbsp&nbsp&nbsp  else
               <br>
-              <pre>    render 'edit'
+              &nbsp&nbsp&nbsp&nbsp    render 'edit'
               <br>
-              <pre>  end
+              &nbsp&nbsp&nbsp&nbsp  end
               <br>
               end
               <br>
               <br>
               def destroy
               <br>
-              <pre>  @example = Example.find(params[:id])
+              &nbsp&nbsp&nbsp&nbsp  @example = Example.find(params[:id])
               <br>
-              <pre>  @example.destroy
+              &nbsp&nbsp&nbsp&nbsp  @example.destroy
               <br>
-              <pre>  redirect_to examples_path
+              &nbsp&nbsp&nbsp&nbsp  redirect_to examples_path
               <br>
               end
               <br>
@@ -137,7 +139,7 @@
               <br>
               def example_params
               <br>
-              <pre>  params.require(:example).permit(:your_own_attribute)
+              &nbsp&nbsp&nbsp&nbsp  params.require(:example).permit(:your_own_attribute)
               <br>
               end
               <br>

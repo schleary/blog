@@ -10,7 +10,7 @@
     <section>
       <article>
         <h2> From Rails to Django </h2>
-        <img class = "postpic" src="/Rails-vs-django-300x300" alt = "Rails vs. Django" height = "35%" />
+        <img class = "postpic" src="/Rails-django.jpg" alt = "Rails vs. Django" height = "35%" />
 
         <div class = "posttext" class="ellipsis">
           Django is to Python as Rails is to Ruby. Mostly.
@@ -27,19 +27,18 @@
             <li>Controllers are called "Views"</li>
             <li>Views are called "Templates"</li>
             <li>Models are slightly more complicated</li>
-          <ul>
+          </ul>
           <p>
           In Rails, the schema is where you make changes to the database via migrations. You typically do not touch the schema file itself, and all of the model validations and logic go directly in the model file.
           <p>
           Not so in Django. In Django, all of your database junk goes in the model. You can create and edit tables in the model and then migrate similarly to Rails.
           <p>
-          The relationships are a bit more confusing, and still aren't entirely clear to me. Whereas you might use <div class = code>belongs_to</div> and <div class = code>has_many</div> in the model in Rails, in Django, you specifiy attributes with different fields like <div class = code>models.OneToOneField</div> Specifically:
+          The relationships are a bit more confusing, and still aren't entirely clear to me. Whereas you might use <div class = inline-code>belongs_to</div> and <div class = inline-code>has_many</div> in the model in Rails, in Django, you specifiy attributes with different fields like <div class = inline-code>models.OneToOneField</div> Specifically:
           <p>
-          <div class = code>
-            belongs_to == ForeignKey
-            has_many == no longer needed; Django automatically adds this after getting a ForeignKey
-            has_one == OneToOneField, but this is only needed on one side, as the other side will be automatically updated
-          </div>
+          <div class = inline-code>belongs_to</div> == <div class = inline-code>ForeignKey</div>
+          <div class = inline-code>has_many</div> == no longer needed; Django automatically adds this after getting a ForeignKey
+          <div class = inline-code>has_one</div> == <div class = inline-code>OneToOneField</div>, but this is only needed on one side, as the other side will be automatically updated
+
           <p>
           Other differences:
           <p>

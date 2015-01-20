@@ -210,6 +210,12 @@ h2{
   text-shadow: 1px black;
 }
 
+.inline-code {
+  font-family: courier;
+  color: limegreen;
+  display: inline;
+  text-shadow: 1px black;
+}
 .video{
   margin-bottom: 5%;
   float: right;

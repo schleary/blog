@@ -32,13 +32,11 @@
               <br>
               > rails server
               <br>
-              > atom .
-              <br>
             </div>
             <br>
             This starts a new application, creates a database, and starts a local server.
             <br>
-            Still in the terminal (you can do a LOT in the terminal):
+            In your original terminal window (you can do a LOT in the terminal):
             <br>
             <br>
             <div class = code>
@@ -55,7 +53,7 @@
             </div>
             <br>
             Cool. Instant models and controllers. Just make sure that your attributes have the correct
-            types(string, integer, or text, etc.).You've migrated the changes to the database, opened your app, and now
+            types (string, integer, or text, etc.). You've migrated the changes to the database, opened your app, and now
             you're ready to fill in the model-view-controller.
             <br>
             <br>
@@ -87,11 +85,11 @@
               <br>
               &nbsp&nbsp  if @example.save
               <br>
-              &nbsp&nbsp    redirect_to examples_show_path(@album)
+              &nbsp&nbsp&nbsp&nbsp    redirect_to examples_show_path(@album)
               <br>
               &nbsp&nbsp  else
               <br>
-              &nbsp&nbsp    render 'new'
+              &nbsp&nbsp&nbsp&nbsp    render 'new'
               <br>
               &nbsp&nbsp    end
               <br>
@@ -118,11 +116,11 @@
               <br>
               &nbsp&nbsp  if @example.update(find_params)
               <br>
-              &nbsp&nbsp    redirect_to example_show_path(@album)
+              &nbsp&nbsp&nbsp&nbsp    redirect_to example_show_path(@album)
               <br>
               &nbsp&nbsp  else
               <br>
-              &nbsp&nbsp    render 'edit'
+              &nbsp&nbsp&nbsp&nbsp    render 'edit'
               <br>
               &nbsp&nbsp  end
               <br>
@@ -192,7 +190,7 @@
             that take an id are used to update a specific instance of an example object.
             <br>
             <br>
-            Moving on to View pages, where we might see a form to create an instance of an example object, create a new.html.erb file in your views/examples folder: :<br>
+            Moving on to View pages, where we might see a form to create an instance of an example object, create a new.html.erb file in your views/examples folder: <br>
             <br>
             <div class = code>
             form_for @example do |f| <br>

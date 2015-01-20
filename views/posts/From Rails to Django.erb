@@ -1,0 +1,62 @@
+
+<head>
+  <link rel = "stylesheet" href="/style.css" type =text/css />
+  <script src="/javascripts/app.js"></script>
+</head>
+
+<body>
+  <div class = "center">
+
+    <section>
+      <article>
+        <h2> From Rails to Django </h2>
+        <img class = "postpic" src="/macbook_air_wood_desk.jpg" alt = "Holly Leary image" height = "35%" />
+
+        <div class = "posttext" class="ellipsis">
+          Django is to Python as Rails is to Ruby. Mostly.
+          <p>
+          If, like me, you've only ever used one web framework, you might predict that the transition to a new one might range somewhere between easy and impossible. You're probably right.
+          <p>
+          Thankfully, there are a lot of similarities between Rails and Django, however, there are also some key confusing differences. Let's start on a positive note and discuss the similarities:
+          <p>
+
+          And now, on to the differences:
+          <p>
+          Rails operates with an MVC (model-view-controller) framework. Django is pretty much the same, but if you're used to Rails, the naming conventions are extremely counter-intuitive, and understanding how will save hours or even days of head-banging. The thing to remember is this:
+          <p>
+          Django calls it an MTV (model-view-template) architecture.
+          <p>
+          -Controllers are called "Views"
+          -Views are called "Templates"
+          -Models are slightly more complicated*
+          <p>
+          In Rails, the schema is where you make changes to the database via migrations. You typically do not touch the schema file itself, and all of the model validations and logic go in the model file itself.
+          <p>
+          Not so in Django. In Django, all of your database junk goes in the model. You can create and edit tables in the model and then migrate similarly to Rails.
+          <p>
+          The relationships are a bit more confusing, and still isn't entirely clear to me. Whereas you might use belongs_to and has_many in the model in Rails, in Django, you specifiy attributes with different fields like models.OneToOneField. Specifically:
+          <p>
+          belongs_to becomes ForeignKey
+          has_many is no longer needed; Django automatically adds this after getting a ForeignKey
+          has_one becomes OneToOneField, but this is only needed on one side, as the other side will be automatically updated
+          <p>
+          Other differences:
+          <p>
+          Rails puts routes in a routes file, while Django, perhaps more appropriately refers to them as urls.py and uses an unfortunate practice of parsing them out with a regex.
+          <p>
+          When Rails uses erb files, you can use <%= %> tags to interpolate ruby code, and Django seems to have {% %} tags as an equivalent.
+          <p>
+          Oh yes, and the weirdest thing of all: Rails apps or projects are all one thing. But in Django, you can have a single project that uses many apps, and apps can be used in many different projects. Very strange, but I can certainly see how that might be valuable.
+            <div class = "postdate">
+             <p>
+               <div class = "date"> 1.12.15 </div>
+
+               <!-- <%= @date %> -->
+             </p>
+           </div>
+           <!-- <div id="read_more">Read More</div>
+         </div>  <!/posttext -->
+        </article>
+      </section>
+    </div>
+  </body>

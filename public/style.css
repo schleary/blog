@@ -213,7 +213,7 @@ h2{
 .inline-code {
   font-family: courier;
   color: limegreen;
-  display: inline;
+  display: inline-block;
   text-shadow: 1px black;
 }
 .video{
